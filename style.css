@@ -106,6 +106,16 @@
     cursor: pointer;
 }
 
+ p {
+    color: #f0ffffde;
+}
+
+.cadastro > a {
+    color: #00ff88;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 /*ajudar na responsividade*/
 @media only screen and (max-width: 950px) {
     .card-login {
