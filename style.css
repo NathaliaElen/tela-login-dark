@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.conteudo-principal {
+    width: 100vw;/*pega o tamanho da viewport*/
+    height: 100vh;/*pega o tamanho da viewport*/
+    background-color: #201b2c;
+    display: flex;
+    justify-content: center;/*eixo x, horizontal*/
+    align-items: center;/*eixo y, vertical*/
+}
+
+.conteudo-esquerda {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.conteudo-esquerda > h1 {
+    color: #77ffc0;
+    font-size: 3vw;
+}
+
+.img {
+    width: 35vw;
+}
+
+.conteudo-direita {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    width: 60%;/*se baseia pelo tamanho da div*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px; /*primeiro valor eixo y em cima e embaixo, segundo valor eixo x dos lados*/
+    background-color: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;/*primeiro valor eixo x aos lados, segundo valor eixo y - 10px em cima e 10px embaixo, terceiro valor espessura e quarto valor cor*/
+}
+
+.card-login > h1 {
+    color: #00ff88;
+    font-weight: 800;
+    margin: 0;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;/*quando usamos essa propriedade e valor o align-items eixo x e justify-content eixo y, se invertem */
+    align-items: flex-start;/* a esquerda*/
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    outline: none;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.textfield > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder {
+    color: #f0ffff94;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background-color: #00ff88;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+    cursor: pointer;
+}
+
+/*ajudar na responsividade*/
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 85%;
+    }   
+}
+
+@media only screen and (max-width: 600px) {
+    .conteudo-principal {
+        flex-direction: column;
+    }  
+    
+    .conteudo-esquerda > h1 {
+        display: none;
+    }
+
+    .conteudo-esquerda {
+        width: 100%;
+        height: auto;
+    }
+
+    .conteudo-direita {
+        width: 100%;
+        height: auto;
+    }
+
+    .conteudo-esquerda > img {
+        width: 35vh;
+    }
+
+    .card-login {
+        width: 90%;
+    }
+
+}
